@@ -6,3 +6,21 @@
 # N чисел, записанных на новой строчке каждое. Здесь каждое число – это масса
 # соответствующего арбуза. Все числа натуральные и не превышают 30000.
 
+n = int(input('Введите кол-во арбузов:'))
+max_num = 0
+min_num = 30000
+for _ in range(n):
+    temp = int(input())
+    if temp > 30000 and min_num == 30000:
+        print('Ошибка ввода')
+        min_num = 0
+        break
+    elif temp > 30000:
+        print('Ошибка ввода')
+        break
+    if temp > max_num:
+        max_num = temp
+    if temp < min_num:
+        min_num = temp
+print(f'Самый легкий арбуз {min_num}, самый тяжелый {max_num}')
+
