@@ -35,7 +35,7 @@ orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
 
 new = list(filter(lambda x: x[0] != x[1], orbits))
 new2 = max(map(lambda x: x[0]*x[1]*math.pi, new))
-print(new2)
+# print(new2)
 print(list(filter(lambda x: x[0]*x[1]*math.pi == new2, new)))
 
 print(max(list(map(lambda x: x[0] * x[1] * math.pi, filter(lambda x: x[0] != x[1], orbits)))))

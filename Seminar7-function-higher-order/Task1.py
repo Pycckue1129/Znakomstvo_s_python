@@ -11,7 +11,7 @@
 # получился копией values.
 
 
-transformation = lambda x: x
+transformation = lambda x: x * 2
 
 values = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 
