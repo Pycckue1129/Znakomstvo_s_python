@@ -64,13 +64,13 @@ def filter_notes():
         return
     notes = get_notes()
     filtered_notes = [note for note in notes if
-                      datetime.strptime(note['timestamp'], '%Y-%m-%dT%H:%M:%S.%f').date() == date]
+                      datetime.strptime(note['date'], '%Y-%m-%dT%H:%M:%S.%f').date() == date]
     if not filtered_notes:
         print(f'Заметки на {date} не найдены')
     else:
         print(f'Список заметок с датой {date}:')
         for note in filtered_notes:
-            print(f'{note["note_id"]}: {note["title"]}, создано {note["timestamp"]}')
+            print(f'{note["note_id"]}: {note["title"]}, создано {note["date"]}')
 
 
 def save_notes(notes_list):
